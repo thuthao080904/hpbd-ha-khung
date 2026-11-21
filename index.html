@@ -111,7 +111,7 @@
   <section class="hero">
     <span class="spark s1">✦</span><span class="spark s2">★</span><span class="spark s3">✧</span>
 <div class="bunny-stage" aria-label="Usagi đáng yêu">
-  <img class="usagi-image" src="usagi.png" alt="Usagi">
+  <img class="usagi-image" src="https://raw.githubusercontent.com/thuthao080904/hpbd-ha-khung/refs/heads/main/usagi.png" alt="Usagi">
 </div>
     <h1 class="title">CHÚC MỪNG HA HÚI TRÒN TUỔI ĐI TÙ -)))</h1>
     <div class="music-player">
@@ -129,7 +129,7 @@
 
   <section class="panel">
     <h2>📢 Thông báo khẩn cấp</h2>
-    <p>Đối tượng <b>Hào</b> đã chính thức mở khóa cấp độ <b>18</b>. Kể từ hôm nay, độ tuổi tăng lên nhưng độ báo thì đề nghị không được giảm. Chúc mừng nha, Ha húi! =)))</p>
+    <p>Đối tượng <b>Ha</b> đã chính thức mở khóa cấp độ <b>18</b>. Kể từ hôm nay, độ tuổi tăng lên nhưng độ báo thì đề nghị không được giảm. Chúc mừng nha, Ha húi! =)))</p>
     <div class="buttons">
       <button onclick="openGift()">🎁 Mở quà bí mật</button>
       <button class="secondary" onclick="sayUsagi()">🐰 Gọi Usagi ú na ú nà</button>
@@ -137,21 +137,20 @@
       <button onclick="celebrate()">🎉 Ăn mừng tuổi 18</button>
     </div>
     <div id="gift" class="letter hidden">
-      <b>GỬI HÀO — AKA AHAHA / HA HÚI / HA TÓ / HA TỆ BẠC 💛</b><br><br>
-      Chúc mừng sinh nhật tuổi 18! Chúc ông tuổi mới vui vẻ, khỏe mạnh, gặp nhiều điều may và làm gì cũng thuận lợi. Mong là những chuyện tốt đẹp sẽ tự tìm đến ông, còn chuyện xui thì biết đường né xa 3 mét.<br><br>
-      Tuổi 18 rồi, chúc ông trưởng thành vừa đủ, vui tính như cũ, bớt báo một xíu (không cần nhiều đâu, sợ ông không quen), và luôn có thật nhiều lý do để cười. Happy birthday, Hào!!<br><br>
-      <b>— Một lời chúc có đầu tư, không có hoàn tiền.</b>
+      <b>GỬI HA — AKA AHAHA / HA HÚI / HA TÓ / HA TỆ BẠC 💛</b><br><br>
+      Chúc mừng sinh nhật tuổi 18! Chúc Ha tuổi mới vui vẻ, khỏe mạnh, gặp nhiều điều may và làm gì cũng thuận lợi. Chúc Ha có nhiều chuyện vui tự tới, còn chuyện xui thì biết đường né xa 3 mét.<br><br>
+      Tuổi 18 rồi, chúc Ha trưởng thành vừa đủ, vui tính như cũ, bớt tệ một xíu -)))), và luôn có thật nhiều lý do để cười. Happy birthday!!<br><br>
     </div>
     <div id="cake" class="letter hidden">
       <div class="cake">🎂</div>
       <b style="display:block;text-align:center">18 NGỌN NẾN TƯỞNG TƯỢNG ĐÃ ĐƯỢC THỔI!</b>
-      <p style="text-align:center;margin-bottom:0">Ước đi Hào ơi. Usagi đang đợi để quậy tiếp 🐰</p>
+      <p style="text-align:center;margin-bottom:0">Ước đi Ha ơi. Usagi đang đợi để quậy tiếp 🐰</p>
     </div>
     <div id="nickname" class="letter hidden" aria-live="polite">
-      Biệt danh được hệ thống chọn: <b id="nickResult">Ha húi</b> 🤣
+      Gọi là: <b id="nickResult">Ha húi</b> 🤣
     </div>
   </section>
-  <p class="footer">MADE WITH YELLOW CHAOS & A LITTLE BIT OF LOVE 💛</p>
+  <p class="footer">MADE WITH CHIIKAWA & A LITTLE BIT OF LOVE 💛</p>
 </main>
 <script>
 const names = ["Ahaha","Ha húi","Ha tó","Ha tệ bạc"];
@@ -165,7 +164,7 @@ function burst(symbols=["💛","✨","🐰","🎉"]){
   }
 }
 function openGift(){document.getElementById("gift").classList.toggle("hidden");burst(["🎁","💛","✨"])}
-function sayUsagi(){alert("Ú NA Ú NÀAAAAA!!! HÀO 18 TUỔI RỒI ĐÓOOOO 🐰");burst(["🐰","💛","⭐"])}
+function sayUsagi(){alert("Ú NÀ!!! CHÚC MỪNG HA ĐỦ TUỔI ĐI TÙ");burst(["🐰","💛","⭐"])}
 function newNickname(){
   document.getElementById("nickResult").textContent=names[Math.floor(Math.random()*names.length)];
   document.getElementById("nickname").classList.remove("hidden");burst(["🤣","🐰","💛"]);
