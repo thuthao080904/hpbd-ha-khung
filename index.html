@@ -34,7 +34,13 @@
   }
   .spark{position:absolute;font-size:24px;animation:float 2.8s ease-in-out infinite}
   .s1{top:22px;left:22px}.s2{top:35px;right:25px;animation-delay:.7s}.s3{bottom:28px;left:35px;animation-delay:1.2s}
-  .bunny-stage{height:190px;display:grid;place-items:center;position:relative}
+.usagi-image{
+  width:190px;
+  height:190px;
+  object-fit:contain;
+  border-radius:20px;
+  animation:bounce 1.3s ease-in-out infinite;
+}
   /* A simple original bunny placeholder; swap for a Usagi image you have permission to use. */
   .bunny{position:relative;width:142px;height:126px;animation:bounce 1.3s ease-in-out infinite}
   .ear{position:absolute;top:-45px;width:37px;height:82px;border-radius:60% 60% 45% 45%;background:#ffd33f;border:3px solid #8d6421;transform-origin:bottom center}
@@ -96,12 +102,9 @@
 
   <section class="hero">
     <span class="spark s1">✦</span><span class="spark s2">★</span><span class="spark s3">✧</span>
-    <div class="bunny-stage" aria-label="Thỏ vàng hoạt hình">
-      <div class="bunny">
-        <div class="ear left"></div><div class="ear right"></div>
-        <div class="face"><i class="eye l"></i><i class="eye r"></i><i class="cheek l"></i><i class="cheek r"></i><b class="mouth">ω</b></div>
-      </div>
-    </div>
+<div class="bunny-stage" aria-label="Usagi đáng yêu">
+  <img class="usagi-image" src="usagi.png" alt="Usagi">
+</div>
     <h1 class="title">CHÚC MỪNG HA HÚI TRÒN TUỔI ĐI TÙ -)))</h1>
     <div class="music-player">
   <p>🎵 USAGI RAP — SOLO VERSION</p>
