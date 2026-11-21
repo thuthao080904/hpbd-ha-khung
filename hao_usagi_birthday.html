@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#ffe58a">
+<title>Hào 18 tuổi — Ú na ú nà!</title>
+<style>
+  :root{
+    --butter:#ffe58a; --sun:#ffc928; --cream:#fff9df;
+    --orange:#f29b38; --brown:#69451e; --pink:#ffb6b9;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; min-height:100vh; color:var(--brown);
+    font-family: ui-rounded, "Trebuchet MS", system-ui, sans-serif;
+    background:
+      radial-gradient(circle at 12% 10%, #fff 0 3px, transparent 4px),
+      radial-gradient(circle at 84% 18%, #fff 0 4px, transparent 5px),
+      linear-gradient(160deg,#fff4c4,#ffe28a 55%,#ffd46a);
+    background-size:90px 90px,130px 130px,auto;
+    overflow-x:hidden;
+  }
+  .wrap{width:min(760px,92vw);margin:0 auto;padding:24px 0 48px}
+  .top{display:flex;justify-content:space-between;align-items:center;gap:12px}
+  .tag{background:#fff8dc;border:2px solid #f6c95e;border-radius:99px;padding:8px 13px;font-size:12px;font-weight:900;letter-spacing:.08em}
+  .tiny{font-size:12px;font-weight:800;opacity:.7}
+  .hero{
+    margin-top:20px;text-align:center;padding:30px 18px 26px;
+    border:3px solid #fff9e7;border-radius:32px;
+    background:rgba(255,252,235,.83);
+    box-shadow:0 12px 0 rgba(190,126,27,.12),0 22px 50px rgba(153,102,16,.12);
+    position:relative;
+  }
+  .spark{position:absolute;font-size:24px;animation:float 2.8s ease-in-out infinite}
+  .s1{top:22px;left:22px}.s2{top:35px;right:25px;animation-delay:.7s}.s3{bottom:28px;left:35px;animation-delay:1.2s}
+  .bunny-stage{height:190px;display:grid;place-items:center;position:relative}
+  /* A simple original bunny placeholder; swap for a Usagi image you have permission to use. */
+  .bunny{position:relative;width:142px;height:126px;animation:bounce 1.3s ease-in-out infinite}
+  .ear{position:absolute;top:-45px;width:37px;height:82px;border-radius:60% 60% 45% 45%;background:#ffd33f;border:3px solid #8d6421;transform-origin:bottom center}
+  .ear.left{left:28px;transform:rotate(-17deg)} .ear.right{right:28px;transform:rotate(15deg)}
+  .ear:after{content:"";position:absolute;inset:9px 9px 13px;background:#ffb4a9;border-radius:inherit}
+  .face{position:absolute;inset:10px 0 0;background:#ffd33f;border:3px solid #8d6421;border-radius:48% 48% 45% 45%}
+  .eye{position:absolute;top:48px;width:8px;height:12px;background:#5a3b1c;border-radius:50%}
+  .eye.l{left:39px}.eye.r{right:39px}
+  .cheek{position:absolute;top:67px;width:21px;height:12px;background:#ff9c9c;border-radius:50%;opacity:.8}
+  .cheek.l{left:17px}.cheek.r{right:17px}
+  .mouth{position:absolute;top:65px;left:50%;transform:translateX(-50%);font-size:21px;font-weight:1000}
+  .title{font-size:clamp(34px,8vw,58px);line-height:1;margin:4px 0 8px;color:#e69a13;text-shadow:2px 3px #ffe6a4}
+  .subtitle{font-weight:800;font-size:16px;margin:0}
+  .nickname-line{margin:17px auto 0;display:flex;flex-wrap:wrap;justify-content:center;gap:7px}
+  .nick{background:#fff;border:1.5px dashed #eab64a;border-radius:99px;padding:7px 11px;font-size:13px;font-weight:900}
+  .panel{margin-top:18px;background:#fffaf0;border:2px solid #fff;border-radius:24px;padding:20px;box-shadow:0 8px 0 rgba(190,126,27,.1)}
+  h2{font-size:20px;margin:0 0 10px}
+  p{line-height:1.6}
+  .buttons{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:14px}
+  button{border:0;border-radius:16px;padding:14px 12px;background:#ffc83d;color:#603d12;font-weight:950;font-size:14px;cursor:pointer;box-shadow:0 4px 0 #d99a1f;transition:transform .12s}
+  button:active{transform:translateY(3px);box-shadow:0 1px 0 #d99a1f}
+  button.secondary{background:#ffe9e7;box-shadow:0 4px 0 #eaa4a1}
+  .hidden{display:none}
+  .letter{margin-top:14px;padding:17px;border-radius:18px;background:#fff0bd;border:2px dashed #e6b43d;line-height:1.7}
+  .cake{font-size:54px;text-align:center;filter:drop-shadow(0 4px 0 #f5d17a)}
+  .footer{text-align:center;font-size:12px;font-weight:800;opacity:.65;margin:22px 0}
+  .pop{position:fixed;pointer-events:none;z-index:9;font-size:22px;animation:pop 1.1s ease-out forwards}
+  @keyframes bounce{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-12px) rotate(3deg)}}
+  @keyframes float{0%,100%{transform:translateY(0) rotate(-8deg)}50%{transform:translateY(-9px) rotate(8deg)}}
+  @keyframes pop{0%{opacity:1;transform:translateY(0) scale(.6) rotate(0)}100%{opacity:0;transform:translateY(-130px) scale(1.5) rotate(35deg)}}
+  @media(max-width:480px){.wrap{padding-top:15px}.hero{padding:24px 12px}.buttons{grid-template-columns:1fr}.bunny-stage{height:175px}}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header class="top">
+    <span class="tag">🐰 USAGI BIRTHDAY CLUB</span>
+    <span class="tiny">SPECIAL LEVEL: 18</span>
+  </header>
+
+  <section class="hero">
+    <span class="spark s1">✦</span><span class="spark s2">★</span><span class="spark s3">✧</span>
+    <div class="bunny-stage" aria-label="Thỏ vàng hoạt hình">
+      <div class="bunny">
+        <div class="ear left"></div><div class="ear right"></div>
+        <div class="face"><i class="eye l"></i><i class="eye r"></i><i class="cheek l"></i><i class="cheek r"></i><b class="mouth">ω</b></div>
+      </div>
+    </div>
+    <div class="tiny">HÔM NAY CÓ MỘT NHÂN VẬT ĐƯỢC LÊN CẤP</div>
+    <h1 class="title">HÀO 18 TUỔI!!</h1>
+    <p class="subtitle">Ú NA Ú NÀAAAAA 🥳</p>
+    <div class="nickname-line">
+      <span class="nick">Ahaha</span><span class="nick">Ha húi</span>
+      <span class="nick">Ha tó</span><span class="nick">Ha tệ bạc</span>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>📢 Thông báo khẩn cấp</h2>
+    <p>Đối tượng <b>Hào</b> đã chính thức mở khóa cấp độ <b>18</b>. Kể từ hôm nay, độ tuổi tăng lên nhưng độ báo thì đề nghị không được giảm. Chúc mừng nha, Ha húi! =)))</p>
+    <div class="buttons">
+      <button onclick="openGift()">🎁 Mở quà bí mật</button>
+      <button class="secondary" onclick="sayUsagi()">🐰 Gọi Usagi ú na ú nà</button>
+      <button class="secondary" onclick="newNickname()">🎲 Bốc biệt danh</button>
+      <button onclick="celebrate()">🎉 Ăn mừng tuổi 18</button>
+    </div>
+    <div id="gift" class="letter hidden">
+      <b>GỬI HÀO — AKA AHAHA / HA HÚI / HA TÓ / HA TỆ BẠC 💛</b><br><br>
+      Chúc mừng sinh nhật tuổi 18! Chúc ông tuổi mới vui vẻ, khỏe mạnh, gặp nhiều điều may và làm gì cũng thuận lợi. Mong là những chuyện tốt đẹp sẽ tự tìm đến ông, còn chuyện xui thì biết đường né xa 3 mét.<br><br>
+      Tuổi 18 rồi, chúc ông trưởng thành vừa đủ, vui tính như cũ, bớt báo một xíu (không cần nhiều đâu, sợ ông không quen), và luôn có thật nhiều lý do để cười. Happy birthday, Hào!!<br><br>
+      <b>— Một lời chúc có đầu tư, không có hoàn tiền.</b>
+    </div>
+    <div id="cake" class="letter hidden">
+      <div class="cake">🎂</div>
+      <b style="display:block;text-align:center">18 NGỌN NẾN TƯỞNG TƯỢNG ĐÃ ĐƯỢC THỔI!</b>
+      <p style="text-align:center;margin-bottom:0">Ước đi Hào ơi. Usagi đang đợi để quậy tiếp 🐰</p>
+    </div>
+    <div id="nickname" class="letter hidden" aria-live="polite">
+      Biệt danh được hệ thống chọn: <b id="nickResult">Ha húi</b> 🤣
+    </div>
+  </section>
+  <p class="footer">MADE WITH YELLOW CHAOS & A LITTLE BIT OF LOVE 💛</p>
+</main>
+<script>
+const names = ["Ahaha","Ha húi","Ha tó","Ha tệ bạc"];
+function burst(symbols=["💛","✨","🐰","🎉"]){
+  for(let i=0;i<22;i++){
+    const el=document.createElement("span");el.className="pop";
+    el.textContent=symbols[Math.floor(Math.random()*symbols.length)];
+    el.style.left=Math.random()*100+"vw";el.style.top=(45+Math.random()*45)+"vh";
+    el.style.animationDelay=(Math.random()*.35)+"s";
+    document.body.appendChild(el);setTimeout(()=>el.remove(),1500);
+  }
+}
+function openGift(){document.getElementById("gift").classList.toggle("hidden");burst(["🎁","💛","✨"])}
+function sayUsagi(){alert("Ú NA Ú NÀAAAAA!!! HÀO 18 TUỔI RỒI ĐÓOOOO 🐰");burst(["🐰","💛","⭐"])}
+function newNickname(){
+  document.getElementById("nickResult").textContent=names[Math.floor(Math.random()*names.length)];
+  document.getElementById("nickname").classList.remove("hidden");burst(["🤣","🐰","💛"]);
+}
+function celebrate(){document.getElementById("cake").classList.remove("hidden");burst(["🎂","🎉","✨","💛"])}
+</script>
+</body>
+</html>
